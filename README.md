@@ -30,6 +30,18 @@ import os
 genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
 ```
 
+For Jupyter-based Notebooks (such as Google Colab and Kaggle Notebook), you need to set up your API key. Here's how you can do it:
+
+```python
+import os
+
+os.environ['GOOGLE_API_KEY'] = 'Your_GOOGLE_API_KEY' # Replace with your actual API key
+
+import google.generativeai
+
+google.generativeai.configure(api_key=os.environ['GOOGLE_API_KEY'])
+```
+
 Create a model and run a prompt.
 
 ```python
